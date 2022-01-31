@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAINT</title>
+    <link href="paint.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <nav>
+        <a href="introduccio.html" class="intro">INTRODUCCIÓ</a>
+        <a href="paint.html" class="intro">PAINT</a>
+    </nav>
+    <div class="field">
+        <canvas id="canvas"></canvas>
+        <div class="tools">
+            <button onClick="deshacer()" type="button" class="btn1"></button>
+            <button onClick="limpiar()" type="button" class="btn2"></button>
+            <button onClick="texto()" type="button" class="btn3"></button>
+            <button onClick="goma(this)" type="button" class="btn4" style="color: white;"></button>
+            <button onClick="cuadrado()" type="button" class="btn5"></button>
+            <button onClick="rectangulo()" type="button" class="btn6"></button>
+            <button onClick="triangulo()" type="button" class="btn7"></button>
+            <button onClick="circulo()" type="button" class="btn8"></button>
+            <button onClick="dibujarEspacio()" type="button" class="btn9"></button>
+            <button onClick="dibujarNormal()" type="button" class="btn10"></button>
+            </div>
+            <div class="tools">
+            <div onClick="cambiar_color(this)" class="color-field" style="background: red;"></div>
+            <div onClick="cambiar_color(this)" class="color-field" style="background: blue;"></div>
+            <div onClick="cambiar_color(this)" class="color-field" style="background: green;"></div>
+            <div onClick="cambiar_color(this)" class="color-field" style="background: yellow;"></div>
+            <input onInput="pintar = this.value" type="color" 
+                class="color-picker">
+            <input type="range" min="1" max="100" class="grosor"
+                oninput="grosor_pincel = this.value" value="1">
+            <button class="btn11" id="download"></button>
+            <button onClick="SubirFoto()" type="button" class="button">Subir Foto</button>
+            <button onClick="byn()" type="button" class="button">Blanco y Negro</button>
+            <button onClick="negativo()" type="button" class="button">Negativo</button>
+        </div>
+    </div>
+</body>
+<script src="paint.js"></script>
+</html>
